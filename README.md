@@ -90,7 +90,8 @@ FitTrack is a full-stack web application designed to help users manage and monit
 | exercises | name, category, muscleGroup, equipment, difficulty, description, isCustom, createdBy, createdAt |
 | workouts | userId, title, date, exercises, totalVolume, duration, isCompleted, notes |
 
-
+## Project Structure ##
+```javascript
 fittrack/
 ├── client/
 │   ├── public/
@@ -138,6 +139,7 @@ fittrack/
     ├── index.js                    ← Express app and all API routes
     ├── package.json
     └── seed.js                     ← Database seeding script
+```
 
 ## Developers ##
 | Name | Role |
