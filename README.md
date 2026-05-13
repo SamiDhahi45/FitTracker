@@ -1,67 +1,5 @@
 # 💪 FitTrack — Full Stack Fitness Tracker
 
-## Project Structure
-
-```
-fittrack/
-├── docker-compose.yml
-│
-├── server/
-│   ├── index.js                  ← Express app + ALL routes
-│   ├── Dockerfile
-│   ├── package.json
-│   ├── seed.js                   ← Seed script (5 users, 10 exercises, 3 workouts)
-│   └── Models/
-│       ├── UserModel.js
-│       ├── ExerciseModel.js
-│       └── WorkoutModel.js
-│
-└── client/
-    ├── Dockerfile
-    ├── package.json
-    ├── public/
-    │   └── index.html
-    └── src/
-        ├── index.js              ← Entry point with Redux Provider
-        ├── index.css
-        │
-        ├── Components/           ← All pages and UI components
-        │   ├── App.js
-        │   ├── AppNavbar.js
-        │   ├── Login.js
-        │   ├── Register.js
-        │   ├── Home.js           ← Dashboard
-        │   ├── Workouts.js
-        │   ├── Exercises.js
-        │   ├── Profile.js
-        │   ├── NearbyGyms.js
-        │   ├── WorkoutCard.js
-        │   ├── ExerciseCard.js
-        │   └── ProgressChart.js
-        │
-        ├── Features/             ← Redux Toolkit slices (createAsyncThunk)
-        │   ├── UserSlice.js
-        │   ├── WorkoutSlice.js
-        │   └── ExerciseSlice.js
-        │
-        ├── Store/
-        │   └── store.js          ← Redux store (configureStore)
-        │
-        ├── Validations/          ← Yup validation schemas
-        │   ├── UserValidations.js
-        │   └── WorkoutValidations.js
-        │
-        ├── Images/               ← Place your images here
-        │
-        └── __tests__/            ← React Testing Library
-            ├── Login.test.js
-            ├── WorkoutCard.test.js
-            ├── ProgressChart.test.js
-            └── ExerciseCard.test.js
-```
-
----
-
 ## Getting Started
 
 ### Docker (recommended)
@@ -128,3 +66,65 @@ cd client && npm test
 | Docker                 | docker-compose with 3 services |
 | Deployment             | Client → Vercel, Server → Render |
 | Creativity             | Streak tracker, BMI calculator, volume charts |
+
+---
+
+## Project Structure
+
+```
+fittrack/
+├── docker-compose.yml
+│
+├── server/
+│   ├── index.js                  ← Express app + ALL routes
+│   ├── Dockerfile
+│   ├── package.json
+│   ├── seed.js                   ← Seed script (5 users, 10 exercises, 3 workouts)
+│   └── Models/
+│       ├── UserModel.js
+│       ├── ExerciseModel.js
+│       └── WorkoutModel.js
+│
+└── client/
+    ├── Dockerfile
+    ├── package.json
+    ├── public/
+    │   └── index.html
+    └── src/
+        ├── index.js              ← Entry point with Redux Provider
+        ├── index.css
+        │
+        ├── Components/           ← All pages and UI components
+        │   ├── App.js
+        │   ├── AppNavbar.js
+        │   ├── Login.js
+        │   ├── Register.js
+        │   ├── Home.js           ← Dashboard
+        │   ├── Workouts.js
+        │   ├── Exercises.js
+        │   ├── Profile.js
+        │   ├── NearbyGyms.js
+        │   ├── WorkoutCard.js
+        │   ├── ExerciseCard.js
+        │   └── ProgressChart.js
+        │
+        ├── Features/             ← Redux Toolkit slices (createAsyncThunk)
+        │   ├── UserSlice.js
+        │   ├── WorkoutSlice.js
+        │   └── ExerciseSlice.js
+        │
+        ├── Store/
+        │   └── store.js          ← Redux store (configureStore)
+        │
+        ├── Validations/          ← Yup validation schemas
+        │   ├── UserValidations.js
+        │   └── WorkoutValidations.js
+        │
+        ├── Images/               ← Place your images here
+        │
+        └── __tests__/            ← React Testing Library
+            ├── Login.test.js
+            ├── WorkoutCard.test.js
+            ├── ProgressChart.test.js
+            └── ExerciseCard.test.js
+```
