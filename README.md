@@ -134,9 +134,10 @@ fittrack/
 
 
 ## Developers
-
+<div align="center">
 | Name | Role |
 |------------------------|-----------------|
 | Waseem | Full Stack Dev |
 | Said | Full Stack Dev |
 | Sami | Full Stack Dev |
+</div>
