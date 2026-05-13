@@ -54,16 +54,6 @@ cd client && npm test
 
 ## Criteria Coverage
 
-| Name | Role |
-|------------------------|-----------------|
-| Waseem | Full Stack Dev |
-| Said | Full Stack Dev |
-| Sami | Full Stack Dev |
-
----
-
-## Criteria Coverage
-
 | Criterion              | How it's covered |
 |------------------------|-----------------|
 | Prototype              | Figma: Login, Dashboard, Workouts, Exercises, Profile, NearbyGyms |
@@ -139,3 +129,14 @@ fittrack/
             ├── ProgressChart.test.js
             └── ExerciseCard.test.js
 ```
+
+---
+
+
+## Developers
+
+| Name | Role |
+|------------------------|-----------------|
+| Waseem | Full Stack Dev |
+| Said | Full Stack Dev |
+| Sami | Full Stack Dev |
