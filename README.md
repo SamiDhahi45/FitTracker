@@ -1,7 +1,7 @@
 # 💪 FitTrack — Full Stack Fitness Tracker
 
 ## Getting Started
-
+Note: First Extract zip file "client+server.zip" in same folder
 ### Docker (recommended)
 ```bash
 docker-compose up --build
