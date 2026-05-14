@@ -20,7 +20,6 @@ const Home = () => {
   const stats     = useSelector((state) => state.workouts.stats);
   const isLoading = useSelector((state) => state.workouts.isLoading);
 
-  // Redirect to login if not authenticated — same as teacher's Home.js
   // eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(() => {
     const saved = localStorage.getItem("fittrack_user");
@@ -29,7 +28,6 @@ const Home = () => {
     }
   }, [email]);
 
-  // Fetch workouts and stats when user is available
   // eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(() => {
     const savedUser = JSON.parse(localStorage.getItem("fittrack_user") || "{}");
