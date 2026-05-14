@@ -3,7 +3,6 @@ import axios from "axios";
 
 const initialState = {
   user: JSON.parse(localStorage.getItem("fittrack_user") || "{}"),
-  user: {},
   profile: {},
   isLoading: false,
   isSuccess: false,
