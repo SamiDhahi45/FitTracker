@@ -1,5 +1,4 @@
 import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
-import { useSelector } from "react-redux";
 import AppNavbar from "./Components/AppNavbar";
 import Home from "./Components/Home";
 import Login from "./Components/Login";
