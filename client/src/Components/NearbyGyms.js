@@ -38,7 +38,7 @@ const NearbyGyms = () => {
         try {
           setCoords({ lat: latitude, lng: longitude });
           const res = await axios.get(
-            `http://localhost:3001/getNearbyGyms?lat=${latitude}&lng=${longitude}`
+            `${process.env.REACT_APP_API_URL}/getNearbyGyms?lat=${latitude}&lng=${longitude}`
           );
           setGyms(res.data.gyms);
         } catch (err) {
