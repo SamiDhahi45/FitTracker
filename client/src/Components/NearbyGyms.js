@@ -23,6 +23,7 @@ const NearbyGyms = () => {
   const [loading, setLoading] = useState(false);
   const [error,   setError]   = useState("");
 
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(() => {
     const saved = localStorage.getItem("fittrack_user");
     if (!email && !saved) navigate("/login");
