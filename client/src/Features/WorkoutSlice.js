@@ -15,7 +15,7 @@ export const getWorkouts = createAsyncThunk(
   "workouts/getWorkouts",
   async (userId) => {
     try {
-      const response = await axios.get(`http://localhost:3001/getWorkouts/${userId}`);
+      const response = await axios.get(`${process.env.REACT_APP_API_URL}/getWorkouts/${userId}`);
       return response.data.workouts;
     } catch (error) {
       console.log(error);
@@ -27,7 +27,7 @@ export const getWorkoutStats = createAsyncThunk(
   "workouts/getWorkoutStats",
   async (userId) => {
     try {
-      const response = await axios.get(`http://localhost:3001/getWorkoutStats/${userId}`);
+      const response = await axios.get(`${process.env.REACT_APP_API_URL}/getWorkoutStats/${userId}`);
       return response.data;
     } catch (error) {
       console.log(error);
@@ -39,7 +39,7 @@ export const addWorkout = createAsyncThunk(
   "workouts/addWorkout",
   async (workoutData) => {
     try {
-      const response = await axios.post("http://localhost:3001/addWorkout", workoutData);
+      const response = await axios.post("${process.env.REACT_APP_API_URL}/addWorkout", workoutData);
       console.log(response);
       return response.data.workout;
     } catch (error) {
@@ -55,7 +55,7 @@ export const updateWorkout = createAsyncThunk(
   async ({ workoutId, workoutData }) => {
     try {
       const response = await axios.put(
-        `http://localhost:3001/updateWorkout/${workoutId}`,
+        `${process.env.REACT_APP_API_URL}/updateWorkout/${workoutId}`,
         workoutData
       );
       console.log(response);
@@ -72,7 +72,7 @@ export const deleteWorkout = createAsyncThunk(
   "workouts/deleteWorkout",
   async (workoutId) => {
     try {
-      await axios.delete(`http://localhost:3001/deleteWorkout/${workoutId}`);
+      await axios.delete(`${process.env.REACT_APP_API_URL}/deleteWorkout/${workoutId}`);
       return workoutId; // return id to remove from state
     } catch (error) {
       console.log(error);
