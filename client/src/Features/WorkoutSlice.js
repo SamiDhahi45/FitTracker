@@ -39,7 +39,7 @@ export const addWorkout = createAsyncThunk(
   "workouts/addWorkout",
   async (workoutData) => {
     try {
-      const response = await axios.post("${process.env.REACT_APP_API_URL}/addWorkout", workoutData);
+      const response = await axios.post(`${process.env.REACT_APP_API_URL}/getWorkouts/${userId}`, workoutData);
       console.log(response);
       return response.data.workout;
     } catch (error) {
