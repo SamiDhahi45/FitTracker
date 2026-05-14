@@ -3,7 +3,7 @@ FitTrack is a full-stack web application designed to help users manage and monit
 
 ## Getting Started
 Note 1: First Extract zip file "client+server.zip" in same folder</br>
-Note 2: NearbyGyms is not working properly
+Note 2: NearbyGyms page functionality is not properly working
 ### Docker (recommended)
 ```bash
 docker-compose up --build
