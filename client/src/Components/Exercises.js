@@ -33,6 +33,7 @@ const Exercises = () => {
   const [form,    setForm]    = useState(emptyForm);
   const [error,   setError]   = useState("");
 
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(() => {
     const saved = localStorage.getItem("fittrack_user");
     if (!email && !saved) {
@@ -40,6 +41,7 @@ const Exercises = () => {
     }
   }, [email]);
 
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(() => {
     const savedUser = JSON.parse(localStorage.getItem("fittrack_user") || "{}");
     const id = userId || savedUser._id;
