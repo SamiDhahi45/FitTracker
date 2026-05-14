@@ -27,7 +27,10 @@ const upload = multer({ storage });
 
 const app = express();
 app.use(express.json());
-app.use(cors());
+app.use(cors({
+  origin: "https://fit-tracker-sable.vercel.app",
+  methods: ["GET", "POST", "PUT", "DELETE"],
+}));
 
 // ─── Database Connection ──────────────────────────────────────────────────────
 const connectString =
