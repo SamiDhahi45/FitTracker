@@ -25,6 +25,7 @@ const Profile = () => {
   const profile   = useSelector((state) => state.users.profile);
   const isLoading = useSelector((state) => state.users.isLoading);
 
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(() => {
     const saved = localStorage.getItem("fittrack_user");
     if (!email && !saved) {
@@ -32,6 +33,7 @@ const Profile = () => {
     }
   }, [email]);
 
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(() => {
     if (userId) dispatch(getProfile(userId));
   }, [userId]);
