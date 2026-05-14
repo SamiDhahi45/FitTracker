@@ -16,7 +16,6 @@ const Home = () => {
   const saved = JSON.parse(localStorage.getItem("fittrack_user") || "{}");
   const userId = userFromRedux._id || saved._id;
 
-  const userName  = useSelector((state) => state.users.user.name);
   const workouts  = useSelector((state) => state.workouts.workouts);
   const stats     = useSelector((state) => state.workouts.stats);
   const isLoading = useSelector((state) => state.workouts.isLoading);
