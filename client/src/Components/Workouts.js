@@ -31,7 +31,6 @@ const Workouts = () => {
   const [form,    setForm]    = useState(emptyForm);
   const [error,   setError]   = useState("");
 
-  // Redirect if not logged in
   // eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(() => {
     const saved = localStorage.getItem("fittrack_user");
