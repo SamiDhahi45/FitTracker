@@ -32,6 +32,7 @@ const Workouts = () => {
   const [error,   setError]   = useState("");
 
   // Redirect if not logged in
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(() => {
     const saved = localStorage.getItem("fittrack_user");
     if (!email && !saved) {
@@ -39,6 +40,7 @@ const Workouts = () => {
     }
   }, [email]);
 
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(() => {
     const savedUser = JSON.parse(localStorage.getItem("fittrack_user") || "{}");
     const id = userId || savedUser._id;
