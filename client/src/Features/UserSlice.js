@@ -1,9 +1,8 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import axios from "axios";
 
-const savedUser = JSON.parse(localStorage.getItem("fittrack_user") || "{}");
-
 const initialState = {
+  user: JSON.parse(localStorage.getItem("fittrack_user") || "{}"),
   user: {},
   profile: {},
   isLoading: false,
