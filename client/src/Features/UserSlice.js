@@ -15,7 +15,7 @@ export const registerUser = createAsyncThunk(
   "users/registerUser",
   async (userData) => {
     try {
-      const response = await axios.post("http://localhost:3001/registerUser", {
+      const response = await axios.post(`${process.env.REACT_APP_API_URL}/registerUser`, {
         name:     userData.name,
         email:    userData.email,
         password: userData.password,
@@ -37,7 +37,7 @@ export const registerUser = createAsyncThunk(
 
 export const login = createAsyncThunk("users/login", async (userData) => {
   try {
-    const response = await axios.post("http://localhost:3001/login", {
+    const response = await axios.post(`${process.env.REACT_APP_API_URL}/login`, {
       email:    userData.email,
       password: userData.password,
     });
@@ -52,13 +52,13 @@ export const login = createAsyncThunk("users/login", async (userData) => {
 
 export const logout = createAsyncThunk("users/logout", async () => {
   try {
-    await axios.post("http://localhost:3001/logout");
+    await axios.post(`${process.env.REACT_APP_API_URL}/logout`);
   } catch (error) {}
 });
 
 export const getProfile = createAsyncThunk("users/getProfile", async (userId) => {
   try {
-    const response = await axios.get(`http://localhost:3001/getProfile/${userId}`);
+    const response = await axios.get(`${process.env.REACT_APP_API_URL}/getProfile/${userId}`);
     return response.data;
   } catch (error) {
     console.log(error);
@@ -70,7 +70,7 @@ export const updateProfile = createAsyncThunk(
   async ({ userId, profileData }) => {
     try {
       const response = await axios.put(
-        `http://localhost:3001/updateProfile/${userId}`,
+        `${process.env.REACT_APP_API_URL}/updateProfile/${userId}`,
         profileData
       );
       console.log(response);
@@ -90,7 +90,7 @@ export const uploadProfilePic = createAsyncThunk(
       const formData = new FormData();
       formData.append("profilePic", file);
       const response = await axios.post(
-        `http://localhost:3001/uploadProfilePic/${userId}`,
+        `${process.env.REACT_APP_API_URL}/uploadProfilePic/${userId}`,
         formData,
         { headers: { "Content-Type": "multipart/form-data" } }
       );
