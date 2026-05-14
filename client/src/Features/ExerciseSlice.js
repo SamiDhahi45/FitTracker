@@ -14,7 +14,7 @@ export const getExercises = createAsyncThunk(
   "exercises/getExercises",
   async (userId) => {
     try {
-      const response = await axios.get(`http://localhost:3001/getExercises/${userId}`);
+      const response = await axios.get(`${process.env.REACT_APP_API_URL}/getExercises/${userId}`);
       return response.data.exercises;
     } catch (error) {
       console.log(error);
@@ -26,7 +26,7 @@ export const addExercise = createAsyncThunk(
   "exercises/addExercise",
   async (exerciseData) => {
     try {
-      const response = await axios.post("http://localhost:3001/addExercise", exerciseData);
+      const response = await axios.post("${process.env.REACT_APP_API_URL}/addExercise", exerciseData);
       console.log(response);
       return response.data.exercise;
     } catch (error) {
@@ -42,7 +42,7 @@ export const updateExercise = createAsyncThunk(
   async ({ exerciseId, exerciseData }) => {
     try {
       const response = await axios.put(
-        `http://localhost:3001/updateExercise/${exerciseId}`,
+        `${process.env.REACT_APP_API_URL}/updateExercise/${exerciseId}`,
         exerciseData
       );
       console.log(response);
@@ -59,7 +59,7 @@ export const deleteExercise = createAsyncThunk(
   "exercises/deleteExercise",
   async (exerciseId) => {
     try {
-      await axios.delete(`http://localhost:3001/deleteExercise/${exerciseId}`);
+      await axios.delete(`${process.env.REACT_APP_API_URL}/deleteExercise/${exerciseId}`);
       return exerciseId;
     } catch (error) {
       console.log(error);
